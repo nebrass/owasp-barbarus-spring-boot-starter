@@ -10,6 +10,35 @@
 
     <name>OWASP Barbarus Starter</name>
     <description>Spring Boot Starter for OWASP Barbarus</description>
+    <url>http://github.com/nebrass/owasp-barbarus</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/nebrass/owasp-barbarus.git</connection>
+        <developerConnection>scm:git:https://github.com/nebrass/owasp-barbarus.git</developerConnection>
+        <url>https://github.com/nebrass/owasp-barbarus/tree/master</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>nebrass</id>
+            <name>Nebrass Lamouchi</name>
+            <email>nebrass.lamouchi at owasp.org</email>
+            <organization>Open Web Application Security Project Foundation</organization>
+            <organizationUrl>http://www.owasp.org</organizationUrl>
+            <roles>
+                <role>Project lead</role>
+            </roles>
+        </developer>
+    </developers>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -70,5 +99,18 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <connectionUrl>https://github.com/nebrass/owasp-barbarus.git</connectionUrl>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
