@@ -1,0 +1,35 @@
+{
+  "properties": [
+    {
+      "name": "barbarus.paramters.view-id",
+      "type": "java.lang.String",
+      "description": "Barbarus ViewId paramter name gathered from the Authentication Form.",
+      "defaultValue": "view-id"
+    },
+    {
+      "name": "barbarus.paramters.jwt-token",
+      "type": "java.lang.String",
+      "description": "Barbarus JwtToken paramter name sent to the front when the authentication is successful.",
+      "defaultValue": "jwtToken"
+    },
+    {
+      "name": "barbaurs.paramters.token-validity-in-millis",
+      "type": "java.lang.Long",
+      "description": "Barbarus JWT Token validity in millis.",
+      "defaultValue": "86400L"
+    },
+    {
+      "name": "barbaurs.paramters.jwt-secret-key",
+      "type": "java.lang.String",
+      "description": "Barbarus JWT Secret Key. Default value must change.",
+      "defaultValue": "my-secret-token-to-change-in-production"
+    },
+    {
+      "name": "barbaurs.paramters.authorities-key",
+      "type": "java.lang.String",
+      "description": "Authorities key used to map actual security strategy to Barbarus.",
+      "defaultValue": "auth"
+    }
+  ]
+}
+
