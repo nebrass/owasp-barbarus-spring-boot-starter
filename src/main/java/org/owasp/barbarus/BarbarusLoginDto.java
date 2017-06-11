@@ -2,13 +2,14 @@ package org.owasp.barbarus;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 /**
  *
  * @author nebrass
  */
-//TODO
-public class BarbarusLoginDto {
+//TODO Replace this DTO by a JsonObject Map, to let the attribute names be customized
+public class BarbarusLoginDto implements Serializable {
 
     @NotNull
     private String username;

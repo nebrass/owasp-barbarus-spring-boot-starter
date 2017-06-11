@@ -89,7 +89,7 @@
     </dependencies>
 
     <dependencyManagement>
-        <dependencies> <!-- The parent should provide all that -->
+        <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
