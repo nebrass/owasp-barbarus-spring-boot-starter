@@ -1,5 +1,9 @@
 # OWASP Barbarus Implementation 
+Master branch status: <br/>
 ![Build status](https://travis-ci.org/nebrass/owasp-barbarus-spring-boot-starter.svg?branch=master) ![Quality Gate](https://sonarqube.com/api/badges/gate?key=org.owasp:barbarus-starter) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter&metric=code_smells) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter&metric=bugs) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter&metric=reliability_rating) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter&metric=security_rating) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter&metric=sqale_rating)
+
+Dev branch status: <br/>
+![Build status](https://travis-ci.org/nebrass/owasp-barbarus-spring-boot-starter.svg?branch=dev) ![Quality Gate](https://sonarqube.com/api/badges/gate?key=org.owasp:barbarus-starter:dev) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter:dev&metric=code_smells) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter:dev&metric=bugs) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter:dev&metric=reliability_rating) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter:dev&metric=security_rating) ![Measure](https://sonarqube.com/api/badges/measure?key=org.owasp:barbarus-starter:dev&metric=sqale_rating)
 
 This repository contains the proof-of-concept project for [OWASP Barbarus.](https://github.com/nebrass/owasp-barbarus/blob/master/Specifications.adoc)
 
