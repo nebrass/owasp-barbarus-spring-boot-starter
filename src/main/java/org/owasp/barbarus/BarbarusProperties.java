@@ -9,9 +9,12 @@ import javax.validation.constraints.NotNull;
 @Validated
 @ConfigurationProperties
 public class BarbarusProperties {
-    @NotNull
     @Value("${barbarus.paramters.view-id}")
-    private String viewId;
+    private String viewId = "viewId";
+    @Value("${barbarus.paramters.username}")
+    private String username = "username";
+    @Value("${barbarus.paramters.password}")
+    private String pass = "password";
     @NotNull
     @Value("${barbarus.paramters.jwt-token}")
     private String jwtToken;
@@ -22,6 +25,8 @@ public class BarbarusProperties {
     private String jwtSecretKey;
     @Value("${barbarus.paramters.authorities-key}")
     private String authoritiesKey = "auth";
+    @Value("${barbarus.controller.sse-emitter-timeout}")
+    private Long sseEmitterTimeout = 60000L;
 
     public String getViewId() {
         return viewId;
@@ -29,6 +34,22 @@ public class BarbarusProperties {
 
     public void setViewId(String viewId) {
         this.viewId = viewId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
     public String getJwtToken() {
@@ -39,11 +60,11 @@ public class BarbarusProperties {
         this.jwtToken = jwtToken;
     }
 
-    public long getTokenValidityInMillis() {
+    public Long getTokenValidityInMillis() {
         return tokenValidityInMillis;
     }
 
-    public void setTokenValidityInMillis(long tokenValidityInMillis) {
+    public void setTokenValidityInMillis(Long tokenValidityInMillis) {
         this.tokenValidityInMillis = tokenValidityInMillis;
     }
 
@@ -61,5 +82,13 @@ public class BarbarusProperties {
 
     public void setAuthoritiesKey(String authoritiesKey) {
         this.authoritiesKey = authoritiesKey;
+    }
+
+    public Long getSseEmitterTimeout() {
+        return sseEmitterTimeout;
+    }
+
+    public void setSseEmitterTimeout(Long sseEmitterTimeout) {
+        this.sseEmitterTimeout = sseEmitterTimeout;
     }
 }
