@@ -14,7 +14,21 @@ This repository contains the proof-of-concept project for [OWASP Barbarus.](http
 
 * Thanks to [BrowserStack](https://browserstack.com) for allowing us to test live & instantly our POC on thousands of browsers, and to make us able to make it working for most of browsers easily.
 
-<img src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" width="205">
+## Sponsors
+
+### Browserstack
+
+<img src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" width="205"/>
+
+### Yourkit
+
+<img src="https://www.yourkit.com/images/yklogo.png"/>
+
+YourKit supports open source projects with innovative and intelligent tools
+for monitoring and profiling Java and .NET applications.
+YourKit is the creator of <a href="https://www.yourkit.com/java/profiler/">YourKit Java Profiler</a>,
+<a href="https://www.yourkit.com/.net/profiler/">YourKit .NET Profiler</a>,
+and <a href="https://www.yourkit.com/youmonitor/">YourKit YouMonitor</a>.
 
 
 ## Source Code
@@ -22,5 +36,3 @@ Coming soon...
 
 ## Description
 Coming soon...
-
-Chna7welek?
