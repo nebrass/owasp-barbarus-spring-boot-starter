@@ -6,6 +6,9 @@ addons:
     organization: nebrass-github
     token:
       secure: PQo31evv5ts7f156iBwCZf6Kj2ipU8TOk0wCRDVgxOdD43wKMrEja+g85O+PEDQzoI0VlMRYpCOjuFlQtvl8MmZgUOXQ+HeWbycJErIyufRkVY6OaI/TroG+0Inn1+5uYPMJqdlUd8usuJNBZxMu6mugBUI5lskoKqM9d+3srj3OeBAVA80ruaPFh7/LjkkDA51vDgQ6PvyQ6PlKCZagLD45mEo3pp6cXFJzPjYpUIcUbQDCJsZ8cyU3tdc7VddmGbR/Yk9gZkTGojBlLVu8xGVhcW6SoZ7nfhxHczmeTpH3jSfMPdaJ7MRuSwVLwLqr/wnNrE5KfmbeIPUem2GbmGazfXtipA4hW3Bvw0qLTJsVrt73YFkfZeA+LH5lo32CD1elaefaJLDlfRV+ieqtCDpAbLGVKWi1BD2bSbScVr78yrDVt4oDOZGXFTHEhPRzz1/PAfiPLfaSFs7mGvlfQGK6qJxGiOms7DNq7LIxDOTmp6FbewlVLIsw2uAdW5oM3fFbEowOXRxEWpvn0/ib7q1OLLw9u7gJrBpDs2+un4t9WM4Kd96AsgDM1H65uPntGJ4hvS58dYo6grJ4jw+JQHb9esnIMCrzM6k1Z5Zp33tGX17wFvDoKcqgp6rVT/zPzkYqTxd9VLBnb3xAQvmxo1hR4pIexu/zYDkJsLxkDUY=
+    branches:
+      - master
+      - dev
 script:
 - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 env:

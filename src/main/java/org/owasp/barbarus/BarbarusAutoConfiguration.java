@@ -1,6 +1,5 @@
 package org.owasp.barbarus;
 
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
@@ -29,11 +28,12 @@ public class BarbarusAutoConfiguration {
     public static BeanDefinitionRegistryPostProcessor beanDefinitionRegistryPostProcessor() {
         return new BeanDefinitionRegistryPostProcessor() {
             @Override
-            public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+            public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) {
+                //No code will be executed here
             }
 
             @Override
-            public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
+            public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) {
                 ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner(registry);
                 scanner.scan("org.owasp.barbarus");
             }

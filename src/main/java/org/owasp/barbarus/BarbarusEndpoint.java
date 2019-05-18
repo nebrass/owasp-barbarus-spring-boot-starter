@@ -1,5 +1,6 @@
 package org.owasp.barbarus;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.MediaType;
@@ -28,8 +29,9 @@ public class BarbarusEndpoint {
     @GetMapping(value = "${barbarus.controller.sse-emitter}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public SseEmitter sseEmitter() throws IOException {
         String viewId = UUID.randomUUID().toString();
-        //TODO timeout personnalisé
-        SseEmitter emitter = new SseEmitter();
+
+        SseEmitter emitter =
+                new SseEmitter(this.barbarusProperties.getSseEmitterTimeout());
         emitter.onCompletion(() -> this.emitters.remove(emitter));
         emitter.onTimeout(() -> this.emitters.remove(emitter));
 
@@ -50,7 +52,15 @@ public class BarbarusEndpoint {
     }
 
     @PostMapping(path = "${barbarus.controller.login}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void login(@RequestBody BarbarusLoginDto loginDto) {
+    public void login(@RequestBody JsonNode jsonContent) {
+
+        BarbarusLoginDto loginDto =
+                new BarbarusLoginDto(
+                    jsonContent.get(this.barbarusProperties.getUsername()).asText(),
+                        jsonContent.get(this.barbarusProperties.getPass()).asText(),
+                        jsonContent.get(this.barbarusProperties.getViewId()).asText()
+                );
+
         this.publisher.publishEvent(loginDto);
     }
 
